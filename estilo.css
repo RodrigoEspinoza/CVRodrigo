@@ -1,3 +1,11 @@
+/*
+1198D8 - Azul
+237BA2 - Azul
+FC8101 - Naranja
+94A5BD
+D3BAB9
+*/
+
 html{
     margin: 0;
     padding: 0;
@@ -9,12 +17,13 @@ html{
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Ubuntu'
 }
 
 h1{
     font-size: 1em;
     text-align: center;
+    color: white;
 }
 
 h2{
@@ -40,48 +49,54 @@ a{
     height: auto;
     display: grid;
     grid-template: repeat(7,auto) / repeat(4,1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
 }
 
 .header{
-    background: black;
+    background: #1198D8;
     color: white;
     display: flex;
     justify-content: space-between;
     grid-column: 1 / span 4;
     align-items:center;
+    padding: 12px;
+    position: sticky;
+    top: 0;
 }
 
-.header div{
-    margin: 20px;
-    font-weight: bold;
+.header-name{
+    margin: 0;
+    font-family: 'Poppins';
+    font-size: 16px;
 }
 
-.header ol{
-    margin-left: 50px; 
+.header-menu{
+    margin: 0; 
+    padding: 0;
     list-style: none;
     display: flex;
 }
 
-.header li{
-    margin: 5px;
+.header-menu li{
+    margin: 0 5px;
     padding: 5px;
     border: solid 1px white;
+    background: #FC8101;
+    color: white;
 }
-
 .abstract{
     grid-column: 1 / span 4;
     display: flex;
     justify-content: center;
     align-content: center;
     padding: 50px;
-    background: gray;
+    background: url(fondo.jpg);
+    background-position-y: center;
     font-style: italic;
     color: white;
 }
 
 .abstract p{
+    background-color:rgba(35, 123, 162,0.2);
     text-align: center;
     font-size: 38px;
 }
@@ -91,33 +106,48 @@ a{
     display: flex;
     justify-content: center;
     align-content: center;
-    border: solid gray 1px;
+    flex-direction: column;
+    border-left: solid #1198D8 10px;
     border-radius: 5px;
-    margin: 5px;
+    margin: 0;
+    background: white;
+    color: black;
 }
 
 .school div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: block;
     align-content: center;
     font-size: 16px;
     padding: 10px;
 }
 
-.school img{
-    width: 100%;
-    height: 45%;
+.school p, .work p{
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #94A5BD;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.school h1{
+    color: #FC8101;
+    text-decoration: underline;
+}
+
+.school h1, .school h2, .school h3{
+    text-align: left;
 }
 
 .work{
     grid-column: 3 / span 2;
-    display: flex;
-    justify-content: center;
+    display: block;
     align-content: center;
-    border: solid gray 1px;
+    border-left: solid #1198D8 10px;
     border-radius: 5px;
-    margin: 5px;
+    margin: 0;
+    background: white;
+    color: black;
 }
 
 .work div{
@@ -129,12 +159,13 @@ a{
     padding: 10px;
 }
 
-.work img{
-    width: 80%;
-    height: 40%;
-    padding: 10px 0 10px 50px;
+.work h1{
+    color: #FC8101;
 }
 
+.work h1, .work h2, .work h3{
+    text-align: right;
+}
 
 .computing{
     grid-column: 1 / span 2;
