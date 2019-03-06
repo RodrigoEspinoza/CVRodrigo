@@ -1,14 +1,5 @@
-/*
-1198D8 - Azul
-237BA2 - Azul
-FC8101 - Naranja
-94A5BD
-D3BAB9
-*/
 
 html{
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -21,19 +12,29 @@ body{
 }
 
 h1{
-    font-size: 1em;
-    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #94A5BD;
     color: white;
+    border-radius: 5px;
+    text-align: center;
 }
 
 h2{
-    font-size: 0.75em;
-    text-align: center;
+    font-size: 14px;
+    text-align: left;
+    color: #FC8101;
+    text-decoration: underline;
 }
 
-h3{
-    font-size:0.65em;
-    text-align: center;
+h3, h4{
+    font-size:12px;
+    text-align: left;
+}
+
+p{
+    margin: 5px;
 }
 
 a{
@@ -42,9 +43,9 @@ a{
 }
 
 .container{
-    max-width: 1024px;
     margin: 0;
     padding: 0;
+    max-width: 1024px;
     width: 100vw;
     height: auto;
     display: grid;
@@ -52,19 +53,20 @@ a{
 }
 
 .header{
-    background: #1198D8;
-    color: white;
+    padding: 12px;
     display: flex;
     justify-content: space-between;
-    grid-column: 1 / span 4;
     align-items:center;
-    padding: 12px;
+    grid-column: 1 / span 4;
     position: sticky;
     top: 0;
+    background: #1198D8;
+    color: white;
 }
 
 .header-name{
     margin: 0;
+    background-color: transparent;
     font-family: 'Poppins';
     font-size: 16px;
 }
@@ -72,8 +74,8 @@ a{
 .header-menu{
     margin: 0; 
     padding: 0;
-    list-style: none;
     display: flex;
+    list-style: none;
 }
 
 .header-menu li{
@@ -84,12 +86,12 @@ a{
     color: white;
 }
 .abstract{
-    grid-column: 1 / span 4;
+    padding: 50px;
     display: flex;
     justify-content: center;
     align-content: center;
-    padding: 50px;
-    background: url(fondo.jpg);
+    grid-column: 1 / span 4;
+    background: url(images/fondo.jpg);
     background-position-y: center;
     font-style: italic;
     color: white;
@@ -102,50 +104,32 @@ a{
 }
 
 .school{
-    grid-column: 1 / span 2;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: column;
+    grid-column: 1 / span 2;
     border-left: solid #1198D8 10px;
     border-radius: 5px;
-    margin: 0;
     background: white;
     color: black;
 }
 
 .school div{
+    padding: 10px;
     display: block;
     align-content: center;
     font-size: 16px;
-    padding: 10px;
-}
-
-.school p, .work p{
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #94A5BD;
-    color: white;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.school h1{
-    color: #FC8101;
-    text-decoration: underline;
-}
-
-.school h1, .school h2, .school h3{
-    text-align: left;
 }
 
 .work{
-    grid-column: 3 / span 2;
+    margin: 0;
     display: block;
     align-content: center;
+    grid-column: 3 / span 2;
     border-left: solid #1198D8 10px;
     border-radius: 5px;
-    margin: 0;
     background: white;
     color: black;
 }
@@ -159,134 +143,85 @@ a{
     padding: 10px;
 }
 
-.work h1{
-    color: #FC8101;
-}
-
-.work h1, .work h2, .work h3{
-    text-align: right;
-}
-
 .computing{
-    grid-column: 1 / span 2;
+    margin: 0;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    grid-column: 1 / span 2;
     font-size: 16px;
-    padding: 10px;
-    border: solid gray 1px;
-    border-radius: 5px;
-    margin: 5px;
 }
 
-.computing ol{
-    list-style: none;
+.list{
+    padding: 0;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
-    padding: 0;
+    list-style: none;
+    overflow: auto;
 }
 
-.computing ol li{
+.list li{
     margin: 5px;
     padding: 5px;
-    border: solid gray 1px;
+    border-bottom: solid purple 5px;
     border-radius: 5px;
     text-align: center;
     text-justify: center;
+}
+
+.list li img{
+    width: 50px;
+    height: 50px;
 }
 
 .tools{
-    grid-column: 3 / span 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    font-size: 16px;
+    margin: 0;
     padding: 10px;
-    border: solid gray 1px;
+    display: block;
+    grid-column: 3 / span 2;
+    border-right: solid #FC8101 10px;
+    border-left: solid #FC8101 10px;
     border-radius: 5px;
-    margin: 5px;
-}
-
-.tools ol{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 0;
-}
-
-.tools ol li{
-    margin: 5px;
-    padding: 5px;
-    border: solid gray 1px;
-    border-radius: 5px;
-    text-align: center;
-    text-justify: center;
+    font-size: 16px;
 }
 
 .programming{
-    grid-column: 1 / span 4;
+    margin: 0;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    font-size: 16px;
-    padding: 10px;
-    border: solid gray 1px;
-    border-radius: 5px;
-    margin: 5px;
-}
-.programming ol{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 0;
-}
-
-.programming ol li{
-    margin: 5px;
-    padding: 5px;
-    border: solid gray 1px;
-    border-radius: 5px;
-    text-align: center;
-    text-justify: center;
+    grid-column: 1 / span 4;
+    border-bottom: solid #94A5BD     10px;
 }
 
 .contact{
-    grid-column: 1 / span 4;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-content: center;
-    background: gray;
+    grid-column: 1 / span 4;
+    background: #FC8101;
     font-style: italic;
     color: white;
 }
 
 .footer{
-    grid-column: 1 / span 4;
+    padding: 5px;
     display: flex;
     justify-content: space-between;
     align-content: center;
-    background: black;
+    grid-column: 1 / span 4;
+    background: #1198D8;
     color: white;
-    padding: 5px;
 }
 
-@media screen and (max-width: 768px){
-    .school img{
-        width: 100%;
-        height: 35%;
-    }
-    .work img{
-        width: 70%;
-        height: 40%;
-        padding: 10px 0 10px 30px;
-    }
-}
+@media screen and (max-width: 768px){}
 
 @media screen and (max-width: 425px){
     .header{
@@ -299,6 +234,10 @@ a{
 
     .header ol{
         margin: 0;
+    }
+
+    .header-menu{
+        justify-content: center;
     }
 
     .abstract{
@@ -343,6 +282,9 @@ a{
         padding: 0;
         justify-content: center;
     }
+    .contact{
+        font-size: 13px;
+    }
 }
 
 @media screen and (max-width: 325px){
@@ -355,5 +297,11 @@ a{
     .school img{
         width: 100%;
         height: 25%;
+    }
+    .contact{
+        font-size: 12px;
+    }
+    .footer{
+        font-size: 12px;
     }
 }
