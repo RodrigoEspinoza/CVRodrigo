@@ -1,162 +1,283 @@
 
+/*Configuración del Archivo HTML*/
 html{
+    /*Display*/
     display: flex;
     justify-content: center;
     align-content: center;
 }
 
-body{
+/*Configuración del Body*/
+body{    
+    /*Modelo de caja*/
     margin: 0;
     padding: 0;
-    font-family: 'Ubuntu'
+    /*Fuente*/
+    font-family: 'Ubuntu';
+    /*Animación*/
+    animation-name: welcome;
+    animation-duration: 1s;
 }
 
+/*Animación - Cambio de opacidad*/
+@keyframes welcome{
+    0%{
+        /*Opacidad*/
+        opacity: 0;
+    }
+    100%{
+        /*Opacidad*/
+        opacity: 1;
+    }
+}
+
+/*Configuración del Header 1*/
 h1{
+    /*Modelo de caja*/
     padding: 5px;
+    /*Fuente y texto*/
     font-size: 16px;
     font-weight: bold;
-    background-color: #94A5BD;
-    color: white;
-    border-radius: 5px;
     text-align: center;
+    color: white;
+    /*Fondo*/
+    background-color: #94A5BD;
+    /*Borde*/
+    border-radius: 5px;
 }
 
+/*Configuración del Header 2*/
 h2{
+    /*Fuente y texto*/
     font-size: 14px;
     text-align: left;
     color: #FC8101;
     text-decoration: underline;
 }
 
+/*Configuración del Header 3 y 4*/
 h3, h4{
+    /*Fuente y texto*/
     font-size:12px;
     text-align: left;
 }
 
+/*Configuración de un párrafo*/
 p{
+    /*Modelo de caja*/
     margin: 5px;
 }
 
+/*Configuración de un ancla*/
 a{
+    /*Texto*/
     text-decoration: none;
     color: black;
 }
 
+/*Configuración de List Items en el Header*/
+.header nav ol li{
+    /*Borde*/
+    border-radius: 5px;
+}
+
+/*Hover - Cambio de color de List Items en el Header*/
+.header nav ol li:hover{
+    /*Fondo*/
+    background-color: purple;
+}
+
+/*Configuración del Contenedor Principal del Body*/
 .container{
+    /*Modelo de caja*/
     margin: 0;
     padding: 0;
     max-width: 1024px;
     width: 100vw;
     height: auto;
+    /*Display*/
     display: grid;
     grid-template: repeat(7,auto) / repeat(4,1fr);
 }
 
+/*Configuración de la clase "header"*/
 .header{
+    /*Modelo de caja*/
     padding: 12px;
+    /*Display*/
     display: flex;
     justify-content: space-between;
     align-items:center;
     grid-column: 1 / span 4;
     position: sticky;
     top: 0;
+    /*Fondo*/
     background: #1198D8;
+    /*Texto*/
     color: white;
 }
 
+/*Configuración de la clase "header-name"*/
 .header-name{
+    /*Modelo de caja*/
     margin: 0;
+    /*Fondo*/
     background-color: transparent;
+    /*Fuente*/
     font-family: 'Poppins';
     font-size: 16px;
+    /*Animación*/
+    animation-name: movement;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
+/*Animación - Movimiento sobre X*/
+@keyframes movement{
+    100%{
+        /*Tranformación - Traslación*/
+        transform: translateX(100%)
+    }
+}
+
+/*Configuración de la clase "header-menu"*/
 .header-menu{
+    /*Modelo de caja*/
     margin: 0; 
     padding: 0;
+    /*Display*/
     display: flex;
+    /*Lista*/
     list-style: none;
 }
 
+/*Configuración de los List Items de la clase "header-menu"*/
 .header-menu li{
+    /*Modelo de caja*/
     margin: 0 5px;
     padding: 5px;
+    /*Borde*/
     border: solid 1px white;
+    /*Fondo*/
     background: #FC8101;
+    /*Texto*/
     color: white;
 }
+
+/*Configuración de la clase "abstract"*/
 .abstract{
+    /*Modelo de caja*/
     padding: 50px;
+    height: 200px;
+    /*Display*/
     display: flex;
     justify-content: center;
     align-content: center;
     grid-column: 1 / span 4;
+    /*Fondo*/
     background: url(images/fondo.jpg);
     background-position-y: center;
+    /*Fuente y texto*/
     font-style: italic;
     color: white;
 }
 
-.abstract p{
+/*Configuración de las divisiones de la clase "abstract"*/
+.abstract div{
+    /*Modelo de caja*/
+    padding: 60px;
+    /*Fondo*/
     background-color:rgba(35, 123, 162,0.2);
+    /*Fuente y texto*/
     text-align: center;
-    font-size: 38px;
+    font-size: 22px;
 }
 
+/*Configuración de la clase "school"*/
 .school{
+    /*Modelo de caja*/
     margin: 0;
+    max-height: 500px;
+    /*Display*/
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
     flex-direction: column;
     grid-column: 1 / span 2;
+    /*Borde*/
     border-left: solid #1198D8 10px;
     border-radius: 5px;
+    /*Fondo*/
     background: white;
     color: black;
 }
 
+/*Configuración de las divisiones de la clase "school"*/
 .school div{
+    /*Modelo de caja*/
     padding: 10px;
+    /*Display*/
     display: block;
     align-content: center;
+    /*Fuente*/
     font-size: 16px;
 }
 
+/*Configuración de la clase "work"*/
 .work{
+    /*Modelo de caja*/
     margin: 0;
+    max-height: 500px;
+    /*Display*/
     display: block;
     align-content: center;
     grid-column: 3 / span 2;
+    overflow: auto;
+    /*Borde*/
     border-left: solid #1198D8 10px;
     border-radius: 5px;
+    /*Fondo*/
     background: white;
+    /*Texto*/
     color: black;
 }
 
+/*Configuración de las divisiones de la clase "work"*/
 .work div{
+    /*Modelo de caja*/
+    padding: 10px;
+    /*Display*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    /*Fuente*/
     font-size: 16px;
-    padding: 10px;
 }
 
+/*Configuración de la clase "computing"*/
 .computing{
+    /*Modelo de caja*/
     margin: 0;
     padding: 10px;
+    /*Display*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     grid-column: 1 / span 2;
+    /*Fuente*/
     font-size: 16px;
 }
 
+/*Configuración de la clase "list"*/
 .list{
+    /*Modelo de caja*/
     padding: 0;
     max-width: 100%;
+    /*Display*/
     display: flex;
     justify-content: center;
     align-content: center;
@@ -164,144 +285,407 @@ a{
     overflow: auto;
 }
 
+/*Configuración de los List Items de la clase "list"*/
 .list li{
+    /*Modelo de caja*/
     margin: 5px;
     padding: 5px;
+    /*Borde*/
     border-bottom: solid purple 5px;
     border-radius: 5px;
+    /*Texto*/
     text-align: center;
     text-justify: center;
 }
 
+/*Hover - Cambio de grosor de borde inferior"*/
+.list li:hover{
+    /*Borde*/
+    border-bottom: solid purple 1px;
+    /*Fuente*/
+    font-weight: bold;
+}
+
+/*Configuración de las imágenes de la clase "list"*/
 .list li img{
+
     width: 50px;
     height: 50px;
 }
 
+/*Configuración de la clase "tools"*/
 .tools{
+    /*Modelo de caja*/
     margin: 0;
     padding: 10px;
+    /*display*/
     display: block;
     grid-column: 3 / span 2;
+    /*Borde*/
     border-right: solid #FC8101 10px;
     border-left: solid #FC8101 10px;
     border-radius: 5px;
+    /*Fuente*/
     font-size: 16px;
 }
 
+/*Configuración de la clase "programming"*/
 .programming{
+    /*Modelo de caja*/
     margin: 0;
     padding: 10px;
+    /*Display*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     grid-column: 1 / span 4;
+    /*Borde*/
     border-bottom: solid #94A5BD     10px;
 }
 
-.contact{
+/*Configuración de la clase "list-programming"*/
+.list-programming{
+    /*Modelo de caja*/
+    padding: 0;
+    max-width: 100%;
+    height: 605px;
+    /*Display*/
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    overflow: auto;
+}
+
+/*Configuración de los List Items de la clase "list-programming"*/
+.list-programming li{
+    /*Modelo de caja*/
+    margin: 55px;
     padding: 10px;
+    /*Borde*/
+    border-bottom: solid purple 5px;
+    border-radius: 5px;
+    /*Texto*/
+    text-align: center;
+    text-justify: center;
+}
+
+/*Hover - Cambio de tamaño de objeto*/
+.list-programming li:hover{
+    /*Tranformación - Escala*/
+    transform: scale(1.5);
+}
+
+/*Configuración de las imágenes de la clase "list-programming"*/
+.list-programming li img{
+    /*Modelo de caja*/
+    width: 75px;
+    height: 75px;
+}
+
+/*Configuración de la clase "contact"*/
+.contact{
+    /*Modelo de caja*/
+    padding: 10px;
+    /*Display*/
     display: flex;
     justify-content: center;
     align-content: center;
     grid-column: 1 / span 4;
+    /*Fondo*/
     background: #FC8101;
+    /*Fuente y texto*/
     font-style: italic;
     color: white;
 }
 
+/*Configuración de la clase "footer"*/
 .footer{
+    /*Modelo de caja*/
     padding: 5px;
+    /*Display*/
     display: flex;
     justify-content: space-between;
     align-content: center;
     grid-column: 1 / span 4;
+    /*Fondo*/
     background: #1198D8;
+    /*Texto*/
     color: white;
 }
 
-@media screen and (max-width: 768px){}
+/*Media Screen para Tablet*/
+@media screen and (max-width: 768px){
+    
+    /*Configuración de la clase "header-name"*/
+    .header-name{
+        /*Animación*/
+        animation-duration: 4s;
+    }
+    
+    /*Animación - Movimiento sobre X*/
+    @keyframes movement{
+        100%{
+            /*Tranformación - Traslación sobre X*/
+            transform: translateX(50%)
+            }
+        }
+        
+    /*Configuración de la clase "list-programming"*/    
+    .list-programming{
+        /*Modelo de caja*/
+        height: 650px;
+    }
 
+    /*Configuración de las divisiones de la clase "abstract"*/
+    .abstract div{
+        /*Fuente*/
+        font-size: 18px;
+    }
+}
+
+/*Media Screen para Celular - 425px*/
 @media screen and (max-width: 425px){
+    
+    /*Configuración de la clase "header-name"*/
+    .header-name{
+        /*Animación*/
+        animation-duration: 3s;
+    }
+    
+    /*Animación - Traslación en el eje X*/
+    @keyframes movement{
+        0%{
+            /*Transformación - Traslación en X*/
+            transform: translateX(-10%)
+        }
+        100%{
+            /*Transformación - Traslación en X*/
+            transform: translateX(10%)
+        }
+    }
+
+    /*Configuración de la clase "header*/
     .header{
+        /*Display*/
         display: block;
     }
 
+    /*Configuración de los párrafos de la clase "header"*/
     .header p{
+        /*Texto*/
         text-align: center;
     }
 
+    /*Configuración de las Ordered Lists de la clase "header"*/
     .header ol{
+        /*Modelo de caja*/
         margin: 0;
     }
 
+    /*Configuración de la clase "header-menu"*/
     .header-menu{
+        /*Display*/
         justify-content: center;
     }
 
+    /*Configuración de la clase "abstract"*/
     .abstract{
+        /*Modelo de caja*/
         padding: 5px;
     }
 
+    /*Configuración de las divisiones de la clase "abstract"*/
+    .abstract div{
+        /*Fuente*/
+        font-size: 15px;
+    }
+
+    /*Configuración de la clase "school"*/
     .school{
+        /*Display*/
         grid-column: 1 / span 4; 
     }
 
+    /*Configuración de la clase "work"*/
     .work{
+        /*Display*/
         grid-column: 1 / span 4;
     }
 
+    /*Configuración de la clase "computing"*/
     .computing{
+        /*Display*/
         grid-column: 1 / span 4;
     }
     
+    /*Configuración de la clase "tools"*/
     .tools{
+        /*Display*/
         grid-column: 1 / span 4;
     }
 
+    /*Configuración de la clase "list-programming"*/
+    .list-programming{
+        /*Modelo de caja*/
+        height: 420px;
+    }
+    
+    /*Configuración de los List Items la clase "list-programming"*/
+    .list-programming li{
+        margin: 10px;
+    }
+
+    /*Hover - Cambio de tamaño de objeto*/
+    .list-programming li:hover{
+        /*Transformación - Escala*/
+        transform: scale(1.25);
+    }
+    
+    /*Configuración de las imágenes la clase "list-programming"*/
+    .list-programming li img{
+        /*Modelo de caja*/
+        width: 50px;
+        height: 50px;
+    }
+
+    /*Configuración de las Ordered Lists de la clase "programming"*/
     .programming ol{
+        /*Display*/
         flex-wrap: wrap;
     }
 
+    /*Configuración de los párrafos de la clase "contact"*/
     .contact p{
+        /*Texto*/
         text-align: center;
     }
 
+    /*Configuración de la clase "footer"*/
     .footer{
+        /*Display*/
         display: block;
     }
 
+    /*Configuración de los párrafos de la clase "footer"*/
     .footer p{
+        /*Texto*/
         text-align: center;
     }
 }
 
+/*Media Screen para Celular - 375px*/
 @media screen and (max-width: 375px){
+    
+    /*Configuración de las Ordered Lists de la clase "header"*/
     .header ol{
+        /*Modelo de caja*/
         padding: 0;
+        /*Display*/
         justify-content: center;
     }
+
+    /*Configuración de la clase "contact"*/
     .contact{
+        /*Fuente*/
         font-size: 13px;
+    }
+
+    /*Configuración de la clase "header-name"*/
+    .header-name{
+        /*Animación*/
+        animation-duration: 2s;
+    }
+
+    /*Configuración de las divisiones de la clase "abstract"*/
+    .abstract div{
+        /*Fuente*/
+        font-size: 12px;
     }
 }
 
+/*Media Screen para Celular - 325px*/
 @media screen and (max-width: 325px){
+    
+    /*Configuración de la clase "header-name"*/
+    .header-name{
+        /*Animación*/
+        animation-duration: 2s;
+    }
+
+    /*Animación - Movimiento sobre X*/
+    @keyframes movement{
+        0%{
+            /*Transformación - Traslación en X*/
+            transform: translateX(-5%)
+        }
+        100%{
+            /*Transformación - Traslación en X*/
+            transform: translateX(5%)
+        }
+        }
+    
+    /*Configuración de las Ordered Lists de la clase "header"*/
     .header ol li{
+        /*Fuente*/
         font-size: 10px;
     }
+
+    /*Configuración de los párrafos de la clase "abstract"*/
     .abstract p{
+        /*Fuente*/
         font-size: 28px;
     }
+
+    /*Configuración de las imágenes de la clase "school"*/
     .school img{
+        /*Modelo de caja*/
         width: 100%;
         height: 25%;
     }
+
+    /*Configuración de la clase "contact"*/
     .contact{
+        /*Fuente*/
         font-size: 12px;
     }
+
+    /*Configuración de la clase "footer"*/
     .footer{
+        /*Fuente*/
         font-size: 12px;
+    }
+
+    /*Configuración de la clase "list-programming"*/
+    .list-programming{
+        /*Modelo de caja*/
+        height: 320px;
+    }
+    
+    /*Configuración de los List Items de la clase "list-programming"*/
+    .list-programming li{
+        /*Modelo de caja*/
+        margin: 5px;
+    }
+
+    /*Hover - Cambio de tamaño de objeto*/
+    .list-programming li:hover{
+        /*Tranformación - Escala*/
+        transform: scale(1.125);
+    }
+    
+    /*Configuración de las imágenes de la clase "list-programming"*/
+    .list-programming li img{
+        /*Modelo de caja*/
+        width: 30px;
+        height: 30px;
+    }
+
+    /*Configuración de las divisiones de la clase "abstract"*/
+    .abstract div{
+        /*Fuente*/
+        font-size: 11px;
     }
 }
