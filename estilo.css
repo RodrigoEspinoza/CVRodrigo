@@ -169,7 +169,6 @@ a{
 /*Configuración de la clase "abstract"*/
 .abstract{
     /*Modelo de caja*/
-    padding: 50px;
     height: 200px;
     /*Display*/
     display: flex;
@@ -182,17 +181,15 @@ a{
     /*Fuente y texto*/
     font-style: italic;
     color: white;
+    text-align: center;
+    font-size: 25px;
 }
 
-/*Configuración de las divisiones de la clase "abstract"*/
-.abstract div{
-    /*Modelo de caja*/
-    padding: 60px;
-    /*Fondo*/
-    background-color:rgba(35, 123, 162,0.2);
-    /*Fuente y texto*/
-    text-align: center;
-    font-size: 22px;
+.abstract p{
+    background-color: rgb(17, 152, 216, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /*Configuración de la clase "school"*/
@@ -439,10 +436,10 @@ a{
         height: 650px;
     }
 
-    /*Configuración de las divisiones de la clase "abstract"*/
-    .abstract div{
+    /*Configuración de la clase "abstract"*/
+    .abstract{
         /*Fuente*/
-        font-size: 18px;
+        font-size: 22px;
     }
 }
 
@@ -493,14 +490,8 @@ a{
 
     /*Configuración de la clase "abstract"*/
     .abstract{
-        /*Modelo de caja*/
-        padding: 5px;
-    }
-
-    /*Configuración de las divisiones de la clase "abstract"*/
-    .abstract div{
         /*Fuente*/
-        font-size: 15px;
+        font-size: 18px;
     }
 
     /*Configuración de la clase "school"*/
@@ -599,11 +590,6 @@ a{
         animation-duration: 2s;
     }
 
-    /*Configuración de las divisiones de la clase "abstract"*/
-    .abstract div{
-        /*Fuente*/
-        font-size: 12px;
-    }
 }
 
 /*Media Screen para Celular - 325px*/
@@ -631,12 +617,6 @@ a{
     .header ol li{
         /*Fuente*/
         font-size: 10px;
-    }
-
-    /*Configuración de los párrafos de la clase "abstract"*/
-    .abstract p{
-        /*Fuente*/
-        font-size: 28px;
     }
 
     /*Configuración de las imágenes de la clase "school"*/
@@ -681,11 +661,5 @@ a{
         /*Modelo de caja*/
         width: 30px;
         height: 30px;
-    }
-
-    /*Configuración de las divisiones de la clase "abstract"*/
-    .abstract div{
-        /*Fuente*/
-        font-size: 11px;
     }
 }
